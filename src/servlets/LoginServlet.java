@@ -46,12 +46,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username= request.getParameter("username");
 		String password= request.getParameter("password");
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-			out.println("<head>");
-			out.println("</head>");
-			out.println("<body>");
+
 			if(userpass.containsKey(username) && userpass.get(username).compareTo(password) == 0 ){
 				//Hardcode validation: admin & user view
 				if(username.compareTo("admin")==0){
