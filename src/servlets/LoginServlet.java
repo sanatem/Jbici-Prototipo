@@ -53,18 +53,18 @@ public class LoginServlet extends HttpServlet {
 			out.println("</head>");
 			out.println("<body>");
 			if(userpass.containsKey(username) && userpass.get(username).compareTo(password) == 0 ){
-				out.print("<h1><center>Bien ahí papá!</center></h1>");
+				//Hardcode validation: admin & user view
+				if(username.compareTo("admin")==0){
+					response.sendRedirect("/Jbici-Prototipo/admin.html");
+				}
+				else if(username=="user"){
+					response.sendRedirect("/Jbici-Prototipo/home.html");
+				}
 			}
 			else{
-				out.print("<h1><center>Te re kbio kaker</center></h1>");
-				out.print("<h1><center><a href='/Jbici-Prototipo/login.html'>Volvé a Intentarlo!</a></center></h1>");
+				response.sendRedirect("/Jbici-Prototipo/error_login.html");
 			}
-			
-			out.println("</body>");
-		
-		out.println("</html>");
-		out.close();
-		
+					
 	}
 
 }
