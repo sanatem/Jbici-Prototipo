@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -35,34 +35,35 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="estaciones">Estaciones <span class="caret"></span></os-p></a>
-			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="/Jbici-Prototipo/admin/alta_estacion.html"><os-p key="altaEstacion">Agregar Estacion</os-p></a></li>
-			                <li><a href="/Jbici-Prototipo/admin/listado_estaciones.html"><os-p key="listadoEstaciones">Listados</os-p></a></li>
-			                <li><a href="/Jbici-Prototipo/admin/estadisticas.html"><os-p key="estadisticaEstaciones">Informacion estadistica</os-p></a></li>
-			              </ul>
-         		   </li>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="estaciones">Estaciones <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="/Jbici-Prototipo/admin/alta_estacion.html">Agregar Estacion</a></li>
+                            <li><a href="/Jbici-Prototipo/admin/listado_estaciones.html">Administrar Estaciones</a></li>
+                            <li><a href="/Jbici-Prototipo/admin/estadisticas.html">Información estadística</a></li>
+                          </ul>
+                   </li>
                    <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="bicicletas">Bicicletas <span class="caret"></span></os-p></a>
-			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="/Jbici-Prototipo/admin/alta_bici.html"><os-p key="altaBicicleta">Agregar Bicicleta</os-p></a></li>
-			                <li><a href="/Jbici-Prototipo/admin/alta_bici.html"><os-p key="listadoBicicleta">Listados</os-p></a></li>
-			              </ul>
-         		   </li>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="bicicletas">Bicicletas <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="/Jbici-Prototipo/admin/alta_bici.html">Agregar Bicicleta</a></li>
+                            <li><a href="/Jbici-Prototipo/admin/listado_bicicletas.html">Administrar Bicicletas</a></li>
+                            <li><a href="/Jbici-Prototipo/admin/historial.html">Historial de Uso</a></li>
+                          </ul>
+                   </li>
                     <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="usuarios">Usuarios <span class="caret"></span></os-p></a>
-			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="#"><os-p key="alta">Inhabilitar Usuario</os-p></a></li>
-			                <li><a href="#"><os-p key="listado">Listados</os-p></a></li>
-			              </ul>
-         		   </li>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="usuarios">Usuarios <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="/Jbici-Prototipo/admin/editar_usuarios.html">Administrar Usuarios</a></li>
+                            <li><a href="/Jbici-Prototipo/admin/estadisticas_usuarios.html">Información estadística</a></li>
+                          </ul>
+                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="/Jbici-Prototipo/LoginServlet">Salir</a>
+                        <a href="/Jbici-Prototipo/LoginServlet"><span class="glyphicon glyphicon-log-out"></span> Salir</a>
                     </li>
                 </ul>
             </div>
@@ -70,11 +71,15 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-     <div class="jumbotron other-color">
-      <div class="container">
-      	<h1>ESTADISTICAS VIEW</h1>
-      </div>
+    <div class="container">
+      	<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h2>Estadísticas</h2>
+        </div>
+        <div class="panel-body">
+            <img src="../img/esta2.jpg" width="840px" height="480px">
+        </div>    
+        </div>
     </div>
 </body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 </html>

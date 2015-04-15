@@ -47,7 +47,6 @@ public class LoginServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		HttpSession ses = req.getSession(false);
     	if(ses!=null){
     		ses.invalidate();
@@ -73,10 +72,10 @@ public class LoginServlet extends HttpServlet {
 			    sesion.setAttribute("user", user);
 			    
 				if(username.compareTo("admin")==0){
-					response.sendRedirect("/Jbici-Prototipo/admin.html");
+					response.sendRedirect("/Jbici-Prototipo/admin/admin.html");
 				}
 				else if(username.compareTo("user")==0){
-					response.sendRedirect("/Jbici-Prototipo/home.html");
+					response.sendRedirect("/Jbici-Prototipo/user/home.html");
 				}
 				
 			}

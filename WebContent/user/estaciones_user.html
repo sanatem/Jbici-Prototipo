@@ -18,7 +18,7 @@
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <a class="navbar-brand" href="/Jbici-Prototipo/user/home.html">
+                <a class="navbar-brand" href="/Jbici-Prototipo/user/home.html">
                     <span class="glyphicon glyphicon-home"></span>
                      JBici
                 </a>
@@ -39,25 +39,26 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="estaciones">Estaciones <span class="caret"></span></os-p></a>
+			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="estaciones">Estaciones <span class="caret"></span></a>
 			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="/Jbici-Prototipo/user/estaciones_user.html"><os-p key="altaEstacion">Listado de estaciones</os-p></a>
+			                <li><a href="/Jbici-Prototipo/user/mapa_estaciones.html">Mapa de estaciones</a></li>
+			                <li><a href="/Jbici-Prototipo/user/estaciones_user.html">Listado de estaciones</a></li>
 			              </ul>
          		   </li>
          		   <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="bicicletas">Bicicletas <span class="caret"></span></os-p></a>
+			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bicicletas 
+                            <span class="caret"></span></a>
 			              <ul class="dropdown-menu" role="menu">
-			                <li><a href=""><os-p key="">---</os-p></a>
+			                <li><a href="/Jbici-Prototipo/user/acciones_bici.html">Retirar/Estacionar/Denunciar</a></li>
 			              </ul>
          		   </li>
-         		 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="/Jbici-Prototipo/LoginServlet">Salir</a>
+                        <a href="/Jbici-Prototipo/LoginServlet"><span class="glyphicon glyphicon-log-out"></span> Salir</a>
                     </li>
                 </ul>
             </div>
@@ -87,7 +88,7 @@
 					            <td>15</td>
 					            <td>3</td>
 					            <td>Operativa</td>
-					            <td>VER MAPA</td>
+					            <td><button type="submit" class="btn btn-primary" onclick="return mostrar_mapa();">Ver mapa</button></td>
 					        </tr>
 					        <tr>
 					            <td>Pza. Moreno</td>
@@ -95,7 +96,7 @@
 					            <td>30</td>
 					            <td>20</td>
 					            <td>En construccion</td>
-					            <td>VER MAPA</td>
+					            <td><button type="submit" class="btn btn-primary" onclick="return mostrar_mapa();">Ver mapa</button></td>
 					        </tr>
 					    </tbody>
 					</table>
@@ -103,15 +104,41 @@
 			</div>
 
 	</div>
+
+	<div class="modal fade" id="mapita" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Ubicación de la estación</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="../img/mapa.jpg">
+	      </div>
+	      
+	    </div>
+	  </div>
+	</div>
+
 </body>
 
 <script type="text/javascript">
+	
 	$(document).ready( function () {
     	$('#table_id').DataTable({
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"}
         }); //inicializa datatable
 	} );
+
+	/* Modal */
+
+	function mostrar_mapa(){
+
+		$("#mapita").modal();
+
+	}
+
 </script>
 
 </html>
