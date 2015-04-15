@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>User view</title>
-<!-- Bootstrap -->
+<meta charset="UTF-8">
+<title>Estadísticas de Usuarios</title>
+	<!-- Bootstrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	
 	<!-- Home CSS -->
 	<link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Mobile display -->
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -22,7 +21,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Jbici-Prototipo/user/home.html">
+
+                <a class="navbar-brand" href="/Jbici-Prototipo/admin/admin.html">
                     <span class="glyphicon glyphicon-home"></span>
                      JBici
                 </a>
@@ -37,15 +37,24 @@
                     <li class="dropdown">
 			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="estaciones">Estaciones <span class="caret"></span></a>
 			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="/Jbici-Prototipo/user/mapa_estaciones.html">Mapa de estaciones</a></li>
-			                <li><a href="/Jbici-Prototipo/user/estaciones_user.html">Listado de estaciones</a></li>
+			                <li><a href="/Jbici-Prototipo/admin/alta_estacion.html">Agregar Estacion</a></li>
+			                <li><a href="/Jbici-Prototipo/admin/listado_estaciones.html">Administrar Estaciones</a></li>
+			                <li><a href="/Jbici-Prototipo/admin/estadisticas.html">Información estadística</a></li>
 			              </ul>
          		   </li>
-         		   <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bicicletas 
-                            <span class="caret"></span></a>
+                   <li class="dropdown">
+			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="bicicletas">Bicicletas <span class="caret"></span></a>
 			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="/Jbici-Prototipo/user/acciones_bici.html">Retirar/Estacionar/Denunciar</a></li>
+			                <li><a href="/Jbici-Prototipo/admin/alta_bici.html">Agregar Bicicleta</a></li>
+                            <li><a href="/Jbici-Prototipo/admin/listado_bicicletas.html">Administrar Bicicletas</a></li>
+                            <li><a href="/Jbici-Prototipo/admin/historial.html">Historial de Uso</a></li>
+			              </ul>
+         		   </li>
+                    <li class="dropdown">
+			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="usuarios">Usuarios <span class="caret"></span></a>
+			              <ul class="dropdown-menu" role="menu">
+			                <li><a href="/Jbici-Prototipo/admin/editar_usuarios.html">Administrar Usuarios</a></li>
+			                <li><a href="/Jbici-Prototipo/admin/estadisticas_usuarios.html">Información estadística</a></li>
 			              </ul>
          		   </li>
                 </ul>
@@ -62,11 +71,15 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-     <div class="jumbotron other-color">
-      <div class="container">
-        <h1>User view</h1>
-        <p>Aqui se podra acceder a todas las posibilidades que tenga un usuario del sistema !!</p>
-      </div>
+    <div class="container">
+      	<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h2>Estadísticas de Usuarios</h2>
+        </div>
+        <div class="panel-body">
+            <img src="../img/esta3.png" >
+        </div>    
+        </div>
     </div>
-</body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+</body>
 </html>
