@@ -2,13 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Estadísiticas</title>
-<!-- Bootstrap -->
+<title>Estaciones</title>
+	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<!-- Home CSS -->
 	<link rel="stylesheet" href="../css/home.css">
+	<!-- Data tables-->
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.6/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.js"></script>
+    
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -21,8 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
-                <a class="navbar-brand" href="/Jbici-Prototipo/admin/admin.html">
+               <a class="navbar-brand" href="/Jbici-Prototipo/user/home.html">
                     <span class="glyphicon glyphicon-home"></span>
                      JBici
                 </a>
@@ -37,25 +41,16 @@
                     <li class="dropdown">
 			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="estaciones">Estaciones <span class="caret"></span></os-p></a>
 			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="/Jbici-Prototipo/admin/alta_estacion.html"><os-p key="altaEstacion">Agregar Estacion</os-p></a></li>
-			                <li><a href="/Jbici-Prototipo/admin/listado_estaciones.html"><os-p key="listadoEstaciones">Listados</os-p></a></li>
-			                <li><a href="/Jbici-Prototipo/admin/estadisticas.html"><os-p key="estadisticaEstaciones">Informacion estadistica</os-p></a></li>
+			                <li><a href="/Jbici-Prototipo/user/estaciones_user.html"><os-p key="altaEstacion">Listado de estaciones</os-p></a>
 			              </ul>
          		   </li>
-                   <li class="dropdown">
+         		   <li class="dropdown">
 			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="bicicletas">Bicicletas <span class="caret"></span></os-p></a>
 			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="/Jbici-Prototipo/admin/alta_bici.html"><os-p key="altaBicicleta">Agregar Bicicleta</os-p></a></li>
-			                <li><a href="/Jbici-Prototipo/admin/alta_bici.html"><os-p key="listadoBicicleta">Listados</os-p></a></li>
+			                <li><a href=""><os-p key="">---</os-p></a>
 			              </ul>
          		   </li>
-                    <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-replace-tmp-key="usuarios">Usuarios <span class="caret"></span></os-p></a>
-			              <ul class="dropdown-menu" role="menu">
-			                <li><a href="#"><os-p key="alta">Inhabilitar Usuario</os-p></a></li>
-			                <li><a href="#"><os-p key="listado">Listados</os-p></a></li>
-			              </ul>
-         		   </li>
+         		 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
@@ -70,11 +65,53 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+	<div class="container">
+			<div class="panel panel-success">	
+				<div class="panel-heading"><h2 class="form-signin-heading">Listado de Estaciones</h2></div>
+				<div class="panel-body">
+					<table id="table_id" class="display">
+					    <thead>
+					        <tr>
+					            <th>Nombre</th>
+					            <th>Ubicación</th>
+					            <th>#Bicicletas</th>
+					            <th>#Libres</th>
+					            <th>Estado</th>
+					            <th>Acciones</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					        <tr>
+					            <td>Pza. Isla Malvinas</td>
+					            <td>19 y 50</td>
+					            <td>15</td>
+					            <td>3</td>
+					            <td>Operativa</td>
+					            <td>VER MAPA</td>
+					        </tr>
+					        <tr>
+					            <td>Pza. Moreno</td>
+					            <td>12 y 50</td>
+					            <td>30</td>
+					            <td>20</td>
+					            <td>En construccion</td>
+					            <td>VER MAPA</td>
+					        </tr>
+					    </tbody>
+					</table>
+				</div>
+			</div>
 
-     <div class="jumbotron other-color">
-      <div class="container">
-      	<h1>ESTADISTICAS VIEW</h1>
-      </div>
-    </div>
-</body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(document).ready( function () {
+    	$('#table_id').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"}
+        }); //inicializa datatable
+	} );
+</script>
+
 </html>
